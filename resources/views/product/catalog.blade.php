@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.cat')
 
 @section('content')
 
@@ -85,7 +85,7 @@
                                 <div class="sidebar-top-rated mb-30">
                                     <div class="single-top-rated">
                                         <div class="top-rated-img">
-                                            <a href="#"><img src="assets/img/product/sidebar-product/1.jpg" alt=""></a>
+                                            <a href="#"><img src="/assets/img/product/sidebar-product/1.jpg" alt=""></a>
                                         </div>
                                         <div class="top-rated-text">
                                             <h4><a href="#">Flying Drone</a></h4>
@@ -202,7 +202,7 @@
                                             <div class="product-wrapper mb-30">
                                                 <div class="product-img">
                                                     <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/1.jpg" alt="">
+                                                        <img src="/assets/img/product/fashion-colorful/1.jpg" alt="">
                                                     </a>
                                                     <span>hot</span>
                                                     <div class="product-action">
@@ -227,7 +227,7 @@
                                             <div class="product-wrapper mb-30">
                                                 <div class="product-img">
                                                     <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/2.jpg" alt="">
+                                                        <img src="/assets/img/product/fashion-colorful/2.jpg" alt="">
                                                     </a>
                                                     <div class="product-action">
                                                         <a class="animate-left" title="Wishlist" href="#">
@@ -251,7 +251,7 @@
                                             <div class="product-wrapper mb-30">
                                                 <div class="product-img">
                                                     <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/3.jpg" alt="">
+                                                        <img src="/assets/img/product/fashion-colorful/3.jpg" alt="">
                                                     </a>
                                                     <span>new</span>
                                                     <div class="product-action">
@@ -276,7 +276,7 @@
                                             <div class="product-wrapper mb-30">
                                                 <div class="product-img">
                                                     <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/4.jpg" alt="">
+                                                        <img src="/assets/img/product/fashion-colorful/4.jpg" alt="">
                                                     </a>
                                                     <div class="product-action">
                                                         <a class="animate-left" title="Wishlist" href="#">
@@ -300,7 +300,7 @@
                                             <div class="product-wrapper mb-30">
                                                 <div class="product-img">
                                                     <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/4.jpg" alt="">
+                                                        <img src="/assets/img/product/fashion-colorful/4.jpg" alt="">
                                                     </a>
                                                     <div class="product-action">
                                                         <a class="animate-left" title="Wishlist" href="#">
@@ -324,7 +324,7 @@
                                             <div class="product-wrapper mb-30">
                                                 <div class="product-img">
                                                     <a href="#">
-                                                        <img src="assets/img/product/fashion-colorful/3.jpg" alt="">
+                                                        <img src="/assets/img/product/fashion-colorful/3.jpg" alt="">
                                                     </a>
                                                     <span>sell</span>
                                                     <div class="product-action">
