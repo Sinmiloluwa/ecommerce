@@ -1807,12 +1807,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "94c17999bdc86552e1c4c685c5fda52a5b4f994d"
+                "reference": "a2d7238069bb01322f9c2a661449955434fec9c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/94c17999bdc86552e1c4c685c5fda52a5b4f994d",
-                "reference": "94c17999bdc86552e1c4c685c5fda52a5b4f994d",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/a2d7238069bb01322f9c2a661449955434fec9c6",
+                "reference": "a2d7238069bb01322f9c2a661449955434fec9c6",
                 "shasum": ""
             },
             "require": {
@@ -1884,7 +1884,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-05T17:34:12+00:00"
+            "time": "2021-07-06T13:35:54+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2119,16 +2119,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.49.1",
+            "version": "v8.49.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "62aee1bfeefd82f160c7aa3b4c63cb2f053215c0"
+                "reference": "d9b43ee080b4d51344b2e578aa667f85040471a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/62aee1bfeefd82f160c7aa3b4c63cb2f053215c0",
-                "reference": "62aee1bfeefd82f160c7aa3b4c63cb2f053215c0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d9b43ee080b4d51344b2e578aa667f85040471a2",
+                "reference": "d9b43ee080b4d51344b2e578aa667f85040471a2",
                 "shasum": ""
             },
             "require": {
@@ -2283,7 +2283,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-07-02T16:50:12+00:00"
+            "time": "2021-07-06T14:06:38+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -6930,16 +6930,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.14.1",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1"
+                "reference": "89c6201c74db25fa759ff16e78a4d8f32547770e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1",
-                "reference": "ed22aee8d17c7b396f74a58b1e7fefa4f90d5ef1",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/89c6201c74db25fa759ff16e78a4d8f32547770e",
+                "reference": "89c6201c74db25fa759ff16e78a4d8f32547770e",
                 "shasum": ""
             },
             "require": {
@@ -6989,9 +6989,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v.1.14.1"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.15.0"
             },
-            "time": "2021-03-30T06:27:33+00:00"
+            "time": "2021-07-06T20:39:40+00:00"
         },
         {
             "name": "filp/whoops",

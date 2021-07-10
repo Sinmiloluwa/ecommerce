@@ -37,7 +37,7 @@ class ProductController extends Controller
 
         $query = $request->input('query');
 
-        $products = Product::where('name','LIKE',"%$query%")->get();
+        $products = Product::where('name','LIKE',"%$query%")->paginate(20);
 
         return view('product.catalog',compact('products'));
     }
