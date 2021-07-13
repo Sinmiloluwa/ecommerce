@@ -24,4 +24,6 @@ class Product extends Model
             $product->attribute = json_encode(request('attribute'));
         });
     }
+
+    
 }

@@ -191,7 +191,7 @@
           
         </header>
         <!-- header end -->
-		<div class="breadcrumb-area pt-205 pb-210" style="background-image: url(assets/img/banner/ban.jpg)">
+		<div class="breadcrumb-area pt-205 pb-210" style="background-image: url(assets/img/bg/pe1.jpg); background-size:contain">
             <div class="container">
                 
             </div>

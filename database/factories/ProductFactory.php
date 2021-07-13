@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use Faker\Generator as Faker;
 
 class ProductFactory extends Factory
 {
@@ -23,9 +23,9 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'description' => $this->faker->sentence(6),
-            'price' => $this->faker->numberBetween(100, 5000),
+            'name' => $this->faker->name,
+            'description' => $this->faker->text,
+            'price' => $this->faker->numberBetween(100,1000)
         ];
     }
 }

@@ -17,7 +17,7 @@
                         </div>
                         <div class="product-content">
                             <h4><a href="product-details.html"> {{$product->name}} </a></h4>
-                            <span>{{$product->price}}</span>
-                            <h5>$ {{$product->description}}</h5>
+                            <span>$ {{$product->price}}</span><br>
+                            <h5>{{$product->description}}</h5>
                         </div>
                     </div>

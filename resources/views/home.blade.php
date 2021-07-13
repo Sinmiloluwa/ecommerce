@@ -3,9 +3,9 @@
 @section('content')
 <div class="slider-area ">
     <div class="slider-active owl-carousel">
-        <div class="single-slider single-slider-hm1 bg-img height-100vh" style="background-image: url(assets/img/slider/15.jpg)">
+        <div class="single-slider single-slider-hm1 bg-img height-100vh" style="background-image: url(assets/img/banner/bn2.jpg)">
             <div class="slider-content slider-animation slider-content-style-1 slider-animated-1">
-                <h1 class="animated">Fashion</h1>
+                <h1 class="animated">Elegance</h1>
                 <p class="animated">Create you own style for better looks. </p>
             </div>
             <div class="position-slider-img">
@@ -20,10 +20,10 @@
                 </div>
             </div>
         </div>
-        <div class="single-slider single-slider-hm1 bg-img height-100vh" style="background-image: url(assets/img/slider/15.jpg)">
+        <div class="single-slider single-slider-hm1 bg-img height-100vh" style="background-image: url(assets/img/banner/bn3.jpg)">
             <div class="slider-content slider-animation slider-content-style-1 slider-animated-2">
                 <h1 class="animated">Fashion</h1>
-                <p class="animated">Create you own style for better looks. </p>
+                <p class="animated">Be unique, Be confident. </p>
             </div>
             <div class="position-slider-img">
                 <div class="slider-img-1">
@@ -44,16 +44,16 @@
     <div class="row no-gutters">
         <div class="col-md-4">
             <div class="single-banner">
-                <a href="#"><img src="assets/img/banner/1.jpg" alt=""></a>
+                <a href="#"><img src="assets/img/banner/bn5.jpg" alt=""></a>
                 <div class="banner-content banner-content-style1">
-                    <h2>BLUE <br> <span>Glasses</span></h2>
+                    <h2>BLACK <br> <span>Glasses</span></h2>
                     <p>Lorem Ipsum is simply dummy text of the printing.</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="single-banner">
-                <a href="#"><img src="assets/img/banner/2.jpg" alt=""></a>
+                <a href="#"><img src="assets/img/banner/bn7.jpg" alt=""></a>
                 <div class="banner-content banner-content-style2">
                     <span>-  Up to  -</span>
                     <h2>30% off</h2>
@@ -63,7 +63,7 @@
         </div>
         <div class="col-md-4">
             <div class="single-banner">
-                <a href="#"><img src="assets/img/banner/3.jpg" alt=""></a>
+                <a href="#"><img src="assets/img/banner/bn8.jpg" alt=""></a>
                 <div class="banner-content banner-content-style3">
                     <h2>Trand <br>2018.</h2>
                 </div>
