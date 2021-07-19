@@ -46,6 +46,8 @@ Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 
 
 Route::get('home', [App\Http\Controllers\ProductController::class, 'index'])->name('home');
 
+Route::get('/cart/apply-coupon', [App\Http\Controllers\CartController::class, 'applyCoupon'])->name('cart.coupon')->middleware('auth');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
