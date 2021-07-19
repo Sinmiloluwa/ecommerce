@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Cart;
 use session;
+use App\Models\Coupon;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Darryldecode\Cart\CartCondition;
 
 class CartController extends Controller
 {
@@ -19,8 +22,9 @@ class CartController extends Controller
             'name' => $product->name,
             'price' => $product->price,
             'quantity' => 1,
+            'image' => $product->cover_img,
             'attributes' => array(),
-            'associatedModel' => $product
+            'associatedModel' => $product,
         ));
 
         return redirect()->route('cart.index');
@@ -52,5 +56,27 @@ class CartController extends Controller
 
     public function checkout(){
         return view('cart.checkout');
+    }
+
+    public function applyCoupon()
+    {
+        $couponCode = request('coupon_code');
+
+        $couponData = Coupon::where('code', $couponCode)->first();
+
+        if(!$couponData) {
+            return back()->withMessage('Sorry! Coupon does not exist');
+            
+        }
+        $condition = new \Darryldecode\Cart\CartCondition(array(
+            'name' => $couponData->name,
+            'type' => $couponData->type,
+            'target' => 'total',
+            'value' => $couponData->value
+        ));
+
+        \Cart::session(auth()->id())->condition($condition);
+
+        return back()->withMessage('Coupon applied');
     }
 }
