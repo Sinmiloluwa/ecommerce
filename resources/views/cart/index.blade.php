@@ -18,7 +18,7 @@
                                         <th>Product</th>
                                         <th>Price</th>
                                         <th>Quantity</th>
-                                        <th>Total</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,13 +38,13 @@
                                         </form>
                                         </td>
 
-                                        <td class="product-subtotal">$165.00</td>
+                                        
                                     </tr>
                              @endforeach
                                 </tbody>
                             </table>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="coupon-all">
                                     <div class="coupon">
@@ -54,13 +54,12 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row">
                             <div class="col-md-5 ml-auto">
                                 <div class="cart-page-total">
                                     <h2>Cart totals</h2>
                                     <ul>
-                                        <li>Subtotal<span>100.00</span></li>
                                         <li>Total<span>$ {{Cart::session(auth()->id())->getTotal()}}</span></li>
                                     </ul>
                                     <a href="{{route('cart.checkout')}}">Proceed to checkout</a>
