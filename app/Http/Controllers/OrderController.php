@@ -101,6 +101,8 @@ class OrderController extends Controller
             return view('paystack.checkout', compact('cartItems','order'));
         }
 
+        $order->generateSubOrders();
+
         //empty cart
         \Cart::session(auth()->id())->clear();
         //send email to customer

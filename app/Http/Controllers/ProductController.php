@@ -27,9 +27,11 @@ class ProductController extends Controller
             $products = $category->allProducts();
         } else
         {
-            $products = Product::take(20)->get();
+            $products = Product::take(8)->get();
         }
-       return view('home', compact('products'));
+        $newArrivals = Product::orderBy('created_at', 'DESC')->paginate(3);
+        $shuffle = Product::all()->shuffle();
+       return view('home', compact('products','newArrivals','shuffle'));
     }
 
     public function search(Request $request)
