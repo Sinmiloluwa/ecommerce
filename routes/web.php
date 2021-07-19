@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -48,4 +49,18 @@ Route::get('home', [App\Http\Controllers\ProductController::class, 'index'])->na
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::get('/order/pay/{suborder}', [App\Http\Controllers\SubOrderController::class, 'pay'])->name('order.pay');
+
+Route::group(['prefix' => 'seller', 'middleware' => 'auth', 'as' => 'seller.'], function() {
+    Route::redirect('/', 'seller/orders');
+    Route::resource('/orders', App\Http\Controllers\Seller\OrderController::class);
+    Route::get('/orders/delivered/{suborder}', [App\Http\Controllers\Seller\OrderController::class, 'markDelivered'])->name('order.delivered');
+});
+
+Route::get('/test', function(){
+    $o = Order::find(1);
+
+    $o->generateSubOrders();
 });
