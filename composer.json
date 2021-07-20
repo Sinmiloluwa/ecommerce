@@ -8,7 +8,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^7.4|^8.0",
         "darryldecode/cart": "^4.2",
         "doctrine/dbal": "^2.5",
         "fakerphp/faker": "^1.15",
@@ -21,7 +21,8 @@
         "orangehill/iseed": "^3.0",
         "tcg/voyager": "^1.4",
         "unicodeveloper/laravel-paystack": "^1.0",
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "ext-exif":"*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
