@@ -61,7 +61,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="sidebar-widget mb-50">
+                        <div class="sidebar-widget mb-50">
                             <h3 class="sidebar-title">Top rated products</h3>
                             <div class="sidebar-top-rated-all">
                                 <div class="sidebar-top-rated mb-30">
@@ -86,7 +86,7 @@
                                 </div>
                                 
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div> 
                 <div class="col-lg-9">

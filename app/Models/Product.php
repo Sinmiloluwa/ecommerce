@@ -18,6 +18,7 @@ class Product extends Model
         return $this->belongsTo(Shop::class, 'shop_id');
     }
 
+    
     protected static function booted()
     {
         static::saving(function($product) {
@@ -25,5 +26,8 @@ class Product extends Model
         });
     }
 
-    
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class,'product_categories','product_id','category_id');
+    }
 }

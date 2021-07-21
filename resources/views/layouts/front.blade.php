@@ -40,22 +40,41 @@
                         <ul>
                             
 
-                            <li><a href="#">Categories</a>
+                            <!-- <li><a href="#">Categories</a>
                                 <div class="mega-menu-dropdown mega-dropdown-width-2">
                                     <div class="mega-dropdown-style mega-common2 mega-common4">
                                         <h4 class="mega-subtitle"> Clothing Categories</h4>
                                         <ul>
-                                            @php
-                                                $categories = App\Models\Category::all();
-                                            @endphp
-                                            @foreach ($categories as $category)
-                                                <li><a href="shop-grid-2-col.html">{{$category->name}}</a></li>
-                                            @endforeach
+                                           
+                                            
 
                                         </ul>
                                     </div>
                                 </div>
+                            </li> -->
+                            @php
+                                $categories = TCG\Voyager\Models\Category::where('parent_id')->get();
+                            @endphp
+                            @foreach ($categories as $category)
+                                
+                            
+
+                            <li><a href="{{route('products.index', ['category_id' => $category->id])}}">{{$category->name}}</a>
+                            @php
+                                $children = TCG\Voyager\Models\Category::where('parent_id',$category->id)->get();
+                            @endphp
+                            @if($children->isNotEmpty())
+                                <ul class="single-dropdown">
+                                    @foreach($children as $child)
+                                    <li><a href="{{route('products.index', ['category_id' => $category->id])}}">{{$child->name}}</a></li>
+                                    @endforeach
+                                </ul>
+                                @endif
                             </li>
+
+                            @endforeach
+                            
+
 
                         </ul>
                     </nav>
@@ -76,6 +95,7 @@
                     </div>
                     <div class="header-search">
                         <form action="{{route('products.search')}}" method="GET">
+                            @csrf
                             <input name="query" placeholder="Search What you want" type="text">
                             <button type="submit">
                                 <i class="ti-search"></i>
@@ -251,10 +271,11 @@
                             <div class="footer-widget-content">
                                 <ul>
                                 @php
-                                                $categories = App\Models\Category::all();
-                                            @endphp
-                                            @foreach ($categories as $category)
-                                            <li><a href="#">{{$category->name}}</a></li>
+                                $categories = TCG\Voyager\Models\Category::where('parent_id')->get();
+                            @endphp
+                            @foreach ($categories as $category)
+                             
+                                            <li><a href="{{route('products.index', ['category_id' => $category->id])}}">{{$category->name}}</a></li>
                                             @endforeach
                                    
                                     

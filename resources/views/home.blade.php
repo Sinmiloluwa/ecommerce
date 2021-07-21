@@ -1,6 +1,8 @@
 @extends('layouts.front')
 
 @section('content')
+
+
 <div class="slider-area ">
     <div class="slider-active owl-carousel">
         <div class="single-slider single-slider-hm1 bg-img height-100vh" style="background-image: url(assets/img/banner/bn2.jpg)">
@@ -44,7 +46,7 @@
     <div class="row no-gutters">
         <div class="col-md-4">
             <div class="single-banner">
-                <a href="#"><img src="assets/img/banner/bn5.jpg" alt=""></a>
+                <img src="assets/img/banner/bn5.jpg" alt="">
                 <div class="banner-content banner-content-style1">
                     <h2>AIR<br> <span>Force</span></h2>
                     <p>Walk with Confidence</p>
@@ -53,7 +55,7 @@
         </div>
         <div class="col-md-4">
             <div class="single-banner">
-                <a href="#"><img src="assets/img/banner/bn7.jpg" alt=""></a>
+                <img src="assets/img/banner/bn7.jpg" alt="">
                 <div class="banner-content banner-content-style2">
                     <span>-  Up to  -</span>
                     <h2>30% off</h2>
@@ -63,9 +65,9 @@
         </div>
         <div class="col-md-4">
             <div class="single-banner">
-                <a href="#"><img src="assets/img/banner/bn8.jpg" alt=""></a>
+                <img src="assets/img/banner/bn8.jpg" alt="">
                 <div class="banner-content banner-content-style3">
-                    <h2>Trand <br>2018.</h2>
+                    <h2>Trend <br>2021.</h2>
                 </div>
             </div>
         </div>
@@ -88,20 +90,17 @@
                         <div class="product-wrapper">
                             <div class="product-img">
                                 <a href="#">
-                                    <img src="assets/img/product/fashion-colorful/1.jpg" alt="">
+                                    <img src="{{url('storage/'.$new->cover_img)}}" alt="">
                                 </a>
-                                <span>hot</span>
+                                <span style="background-color: red;">hot</span>
                                 <div class="product-action">
-                                    <a class="animate-left" title="Wishlist" href="#">
-                                        <i class="pe-7s-like"></i>
-                                    </a>
                                     
                                     <a class="animate-top" title="Add To Cart" href="{{route('cart.add', $new->id)}}">
                                         <i class="pe-7s-cart"></i>
                                     </a>
                                    
                                     
-                                    <a class="animate-right" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                    <a class="animate-right" title="Quick View" href="{{route('products.show',$new->id)}}">
                                         <i class="pe-7s-look"></i>
                                     </a>
                                 </div>
