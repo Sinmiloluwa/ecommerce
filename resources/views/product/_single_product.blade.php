@@ -1,16 +1,16 @@
 <div class="product-wrapper">
                         <div class="product-img">
                             <a href="#">
-                                <img src="/assets/img/product/fashion-colorful/1.jpg" alt="">
+                                <img src="{{url('storage/'.$product->cover_img)}}" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="animate-left" title="Wishlist" href="#">
                                     <i class="pe-7s-like"></i>
                                 </a>
-                                <a class="animate-top" title="Add To Cart" href="#">
+                                <a class="animate-top" title="Add To Cart" href="{{route('cart.add', $product->id)}}">
                                     <i class="pe-7s-cart"></i>
                                 </a>
-                                <a class="animate-right" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="animate-right" title="Quick View" href="{{route('products.show',$product->id)}}">
                                     <i class="pe-7s-look"></i>
                                 </a>
                             </div>
