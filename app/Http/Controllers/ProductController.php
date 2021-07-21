@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        
         $categoryId = request('category_id');
         $categoryName = null;
 
@@ -29,9 +29,8 @@ class ProductController extends Controller
         {
             $products = Product::take(8)->get();
         }
-        $newArrivals = Product::orderBy('created_at', 'DESC')->paginate(3);
-        $shuffle = Product::all()->shuffle();
-       return view('home', compact('products','newArrivals','shuffle'));
+        
+       return view('product.index', compact('products','categoryName'));
     }
 
     public function search(Request $request)
@@ -39,8 +38,18 @@ class ProductController extends Controller
 
         $query = $request->input('query');
 
-        $products = Product::where('name','LIKE',"%$query%")->paginate(20);
+        $products = Product::where('name','like','%'.$query.'%')->paginate(20);
 
         return view('product.catalog',compact('products'));
     }
+
+    public function show(Product $productId)
+    {
+        $product = Product::find($productId)->first();
+        $categories = $product->categories;
+
+        return view('product.view',compact('product','categories'));
+    }
+
+    
 }
