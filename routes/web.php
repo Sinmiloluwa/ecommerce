@@ -20,8 +20,11 @@ Route::redirect('/', '/home');
 Auth::routes();
 
 // Route::resource('home', App\Http\Controllers\ProductController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/products/search', [App\Http\Controllers\ProductController::class, 'search'])->name('products.search');
+Route::get('/products/{productId}', [App\Http\Controllers\ProductController::class, 'show'])->name('products.show');
+// Route::get('/category/{categoryId}', [App\Http\Controllers\ProductController::class, 'category'])->name('category.find');
 
 Route::get('/add-to-cart/{product}', [App\Http\Controllers\CartController::class, 'add'])->name('cart.add')->middleware('auth');
 
@@ -34,6 +37,7 @@ Route::get('/cart/update/{product}', [App\Http\Controllers\CartController::class
 Route::get('/cart/checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('cart.checkout')->middleware('auth');
 
 Route::resource('orders', App\Http\Controllers\OrderController::class);
+Route::resource('products', App\Http\Controllers\ProductController::class);
 
 Route::post('/pay', [App\Http\Controllers\PaymentController::class, 'redirectToGateway'])->middleware('auth')->name('pay');
 
@@ -44,7 +48,7 @@ Route::get('/payment/callback', [App\Http\Controllers\PaymentController::class, 
 
 // Route::view('/paystack/checkout','paystack/checkout')->name('paystack.checkout');
 
-Route::get('home', [App\Http\Controllers\ProductController::class, 'index'])->name('home');
+// Route::get('home', [App\Http\Controllers\ProductController::class, 'index'])->name('home');
 
 Route::get('/cart/apply-coupon', [App\Http\Controllers\CartController::class, 'applyCoupon'])->name('cart.coupon')->middleware('auth');
 
