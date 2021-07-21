@@ -55,7 +55,13 @@ class CartController extends Controller
     }
 
     public function checkout(){
-        return view('cart.checkout');
+        $items = \Cart::session(auth()->id())->getContent();
+        if ($items->isNotEmpty()) {
+            
+            return view('cart.checkout');
+             
+        }
+        return back()->withMessage('Cart is empty');
     }
 
     public function applyCoupon()
