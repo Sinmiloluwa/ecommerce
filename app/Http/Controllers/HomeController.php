@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -26,6 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::take(8)->get();
-        return view('home', compact('products'));
+        $categories = Category::where('parent_id')->get();
+        $newArrivals = Product::orderBy('created_at', 'DESC')->paginate(3);
+        return view('home', compact('products','newArrivals','categories'));
     }
 }
